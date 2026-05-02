@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 def matrix_shape(matrix):
-    shape = []
-    current = matrix
-    while isinstance(current, list):
-        shape.append(len(current))
-        current = current[0]
-    return shape
+    if type(matrix[0]) != list:
+        return [len(matrix)]
+    else:
+        return [len(matrix)] + matrix_shape(matrix[0])
