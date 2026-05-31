@@ -8,7 +8,7 @@ def bars():
     '''Function returns the groups of
     people, fruits, and colors in a stacked bars'''
     np.random.seed(5)
-    fruit = np.random.randint(0, 20, (4,3))
+    fruit = np.random.randint(0, 20, (4, 3))
     plt.figure(figsize=(6.4, 4.8))
 
     people = ['Farrah', 'Fred', 'Felicia']
@@ -19,7 +19,8 @@ def bars():
     bottom_vals = np.zeros(3)
 
     for i in range(len(fruit)):
-        plt.bar(people, fruit[i], width=width, bottom=bottom_vals, color=colors[i], label=labels[i])
+        plt.bar(people, fruit[i], width=width, 
+                bottom=bottom_vals, color=colors[i], label=labels[i])
         bottom_vals += fruit[i]
 
     plt.ylabel('Quantity of Fruit')
