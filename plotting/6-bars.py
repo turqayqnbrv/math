@@ -19,7 +19,7 @@ def bars():
     bottom_vals = np.zeros(3)
 
     for i in range(len(fruit)):
-        plt.bar(people, fruit[i], width=width, 
+        plt.bar(people, fruit[i], width=width,
                 bottom=bottom_vals, color=colors[i], label=labels[i])
         bottom_vals += fruit[i]
 
